@@ -6,11 +6,11 @@ import (
 	"time"
 )
 
-func main()  {
+func main()  { // thread 1
 	// http.HandleFunc("/", HelloWorld)
 	// http.ListenAndServe(":8888", nil)
-	go contador(10)
-	go contador(10)
+	go contador(10) // thread 2
+	go contador(10) // thread 3
 	contador(10)
 }
 
